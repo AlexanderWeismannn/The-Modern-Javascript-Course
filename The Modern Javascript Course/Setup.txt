@@ -1,0 +1,14 @@
+Install visual studio code
+Install the two following extensions:
+	Babel es6/7
+	Sublime command key shortcuts
+Install Node.js
+Install Cmder
+
+FILE PATH:
+==========
+ cd OneDrive - University of New Brunswick/The Modern Javascript Course
+
+TO RUN:
+==========
+node (filename)
