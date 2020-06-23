@@ -3,7 +3,9 @@
 //A = 90 - 100 B = 80 - 89 C = 70 - 79 D = 60 - 69 F = 0 - 59
 
 let studentGrade = function(score, total){
-    grade = (score / total) * 100
+
+    if(typeof score === "number" && typeof total === "number"){
+        grade = (score / total) * 100
     let letter
     if(grade >= 0 && grade <= 59){
         letter = "F"
@@ -18,9 +20,19 @@ let studentGrade = function(score, total){
     }
 
     return letter
+
+    }else{
+        throw Error("Error: Non Numerical Arithmatic")
+    }
+    
 }
 
-let score = 20
-let total = 20
-myMark = studentGrade(score, total)
-console.log(`You got a ${myMark}, ${grade}`)
+let score = 10
+let total = 10
+try{
+    myMark = studentGrade(score, total)
+    console.log(`You got a ${myMark}, ${grade}`)
+}catch(e){
+    console.log(e.message)
+}
+
